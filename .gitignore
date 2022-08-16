@@ -119,5 +119,4 @@ gradle-app.setting
 *.rar
 
 ### Project Specific
-out.csv
-export_simple_*.csv
+*.csv

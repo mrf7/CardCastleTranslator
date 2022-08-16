@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
         val entries = readAllWithHeaderAsSequence()
             .map(::toEntry)
 
-        csvWriter().open("out.csv") {
+        csvWriter().open("$fileName_deckbox.csv") {
             val rows = entries.map { entry ->
                 listOf(entry.count, entry.name, entry.set, entry.number, if (entry.foil) "foil" else "")
             }
