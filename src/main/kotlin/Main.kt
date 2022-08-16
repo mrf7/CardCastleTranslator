@@ -10,9 +10,9 @@ fun main(args: Array<String>) {
 
         csvWriter().open("out.csv") {
             val rows = entries.map { entry ->
-                listOf(entry.count, entry.name, entry.set, entry.number)
+                listOf(entry.count, entry.name, entry.set, entry.number, if (entry.foil) "foil" else "")
             }
-            writeRow(listOf("Count", "Name", "Edition", "Card Number"))
+            writeRow(listOf("Count", "Name", "Edition", "Card Number", "Foil"))
             writeRows(rows)
         }
     }
