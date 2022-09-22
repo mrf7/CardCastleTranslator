@@ -22,7 +22,7 @@ jobs:
         -   name: Setup key
             uses: webfactory/ssh-agent@v0.5.4
             with:
-                ssh-private-key: $ {{secrets.key }} 
+                ssh-private-key: $ {{secrets.KEY }} 
         -   run: |
                 git clone git@github.com:mrf7/FaktorySampleMichaelPers.git
                 ls 
