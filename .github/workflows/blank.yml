@@ -20,7 +20,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: webfactory/ssh-agent@v0.5.4
-        with: ${{ secrets.SSH_PRIVATE_KEY }}
+        with: 
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - uses: actions/checkout@v2.4.2
         with:
           repository: git@github.com:mrf7/FaktorySampleMichaelPers.git
